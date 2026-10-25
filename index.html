@@ -1,104 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>weworkai | Enterprise AI & Product Architecture</title>
-    <script src="https://jsdelivr.net"></script>
-    <style>
-        body { background-color: #0B0F19; color: #F3F4F6; font-family: system-ui, sans-serif; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>weworkai | Custom software and data pipelines, prototyped in 48 hours</title>
+  <meta name="description" content="weworkai builds custom full-stack software and data pipelines that cut manual work, operating cost and headcount needs. See a working prototype in 24 to 48 hours, or pay nothing.">
+  <meta name="theme-color" content="#0B0F19">
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { ink: '#0B0F19', cyan: '#00D1FF', slate2: '#9CA3AF' },
+          fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: optimizeLegibility; scroll-behavior: smooth; }
+    body { background: #0B0F19; }
+    .grad { background: linear-gradient(90deg, #2563EB 0%, #00D1FF 100%); -webkit-background-clip: text; background-clip: text; color: transparent; -webkit-text-fill-color: transparent; }
+  </style>
 </head>
-<body class="selection:bg-blue-600 selection:text-white antialiased">
+<body class="bg-ink text-white font-sans min-h-screen flex flex-col">
 
-    <!-- NAVIGATION BAR -->
-    <nav class="max-w-6xl mx-auto px-6 py-6 flex justify-between items-center border-b border-gray-800/60">
-        <div class="text-xl font-bold tracking-tight text-white flex items-center gap-2">
-            <span class="w-3 h-3 bg-blue-500 rounded-full animate-pulse"></span> weworkai
-        </div>
-        <a href="mailto:weworkai@gmail.com" class="text-sm font-medium text-gray-400 hover:text-blue-400 transition-colors">Contact Engineering Office</a>
-    </nav>
+  <!-- Header -->
+  <header>
+    <div class="max-w-6xl mx-auto px-5 sm:px-8 py-6 flex items-center justify-between">
+      <a href="/" class="flex items-center gap-2.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan rounded">
+        <span class="block h-2.5 w-2.5 rounded-full bg-cyan shadow-[0_0_12px_#00D1FF]"></span>
+        <span class="text-lg font-bold tracking-tight">weworkai</span>
+      </a>
+      <a href="mailto:weworkai@gmail.com" class="text-sm text-slate2 hover:text-white transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan rounded">Contact Engineering Office</a>
+    </div>
+  </header>
 
-    <!-- SECTION 1: HERO & CORE OFFER -->
-    <section class="max-w-4xl mx-auto px-6 pt-20 pb-16 text-center">
-        <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-white leading-tight">
-            We build custom full-stack software and <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">high-leverage data pipelines</span> for fast-growing companies.
-        </h1>
-        <p class="mt-6 text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed">
-            No corporate fluff. No sales jargon. Just production-ready code engineered to eliminate operational bottlenecks, reduce infrastructure costs, and scale seamlessly.
+  <main class="flex-1">
+
+    <!-- Section 1: Hero -->
+    <section class="max-w-6xl mx-auto px-5 sm:px-8 pt-16 pb-20 sm:pt-24 sm:pb-28 text-center">
+      <h1 class="mx-auto max-w-4xl text-[2rem] leading-[1.15] sm:text-5xl lg:text-6xl lg:leading-[1.1] font-extrabold tracking-tight text-white">
+        We build custom full-stack software and <span class="grad">high-leverage data pipelines</span> for fast-growing companies.
+      </h1>
+      <p class="mx-auto mt-6 max-w-2xl text-base sm:text-lg leading-relaxed text-slate2">
+        We replace the manual work slowing your team down. You get fewer repetitive tasks, hours of admin time back every week, lower operating costs, and a team that can grow without hiring for every new process.
+      </p>
+
+      <ul class="mx-auto mt-12 grid max-w-3xl grid-cols-1 sm:grid-cols-3 gap-4 text-left">
+        <li class="rounded-2xl border border-white/10 bg-white/[0.03] p-5">
+          <p class="text-white font-semibold">Time saved</p>
+          <p class="mt-1 text-sm leading-relaxed text-slate2">Manual admin work, automated away.</p>
+        </li>
+        <li class="rounded-2xl border border-white/10 bg-white/[0.03] p-5">
+          <p class="text-white font-semibold">Costs cut</p>
+          <p class="mt-1 text-sm leading-relaxed text-slate2">Less spend on tools, errors and rework.</p>
+        </li>
+        <li class="rounded-2xl border border-white/10 bg-white/[0.03] p-5">
+          <p class="text-white font-semibold">Headcount freed</p>
+          <p class="mt-1 text-sm leading-relaxed text-slate2">Grow output without growing payroll.</p>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Section 2: Prototype Sprint -->
+    <section class="max-w-6xl mx-auto px-5 sm:px-8 pb-20 sm:pb-28">
+      <div class="mx-auto max-w-4xl rounded-3xl border border-white/10 bg-white/[0.03] p-6 sm:p-12">
+        <h2 class="text-2xl sm:text-4xl font-bold tracking-tight text-white">The 24-48 Hour Ideation Prototype</h2>
+        <p class="mt-4 max-w-2xl text-base sm:text-lg leading-relaxed text-slate2">
+          See your solution working before you commit to anything.
         </p>
-        
-        <!-- THE 24-HOUR SPRINT FRAME -->
-        <div class="mt-12 p-8 rounded-2xl bg-gray-900/40 border border-gray-800/80 text-left max-w-2xl mx-auto backdrop-blur-sm">
-            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 text-blue-400 text-xs font-semibold tracking-wide uppercase">
-                Zero Risk Engagement Offer
-            </div>
-            <h3 class="mt-4 text-2xl font-bold text-white">The 24-Hour Technical Prototype Sprint</h3>
-            <p class="mt-3 text-gray-400 leading-relaxed">
-                Most agencies waste weeks on discovery calls just to tell you what they might build. We prefer to show you live software.
+
+        <div class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-5">
+          <div class="rounded-2xl border border-white/10 p-6">
+            <p class="font-semibold text-white">How it works</p>
+            <p class="mt-3 text-sm sm:text-base leading-relaxed text-slate2">
+              Hop on a 15-minute diagnostic call so we can isolate your technical bottleneck. Within 24 to 48 hours, we design, code and deploy a clean, working prototype built around your system.
             </p>
-            <ul class="mt-6 space-y-3 text-sm text-gray-300">
-                <li class="flex items-start gap-3">
-                    <span class="text-blue-400 font-bold">01.</span> <strong>15-Minute Brief:</strong> We hop on a quick call to isolate your most expensive technical bottleneck.
-                </li>
-                <li class="flex items-start gap-3">
-                    <span class="text-blue-400 font-bold">02.</span> <strong>24-Hour Build:</strong> We design, engineer, and deploy a functional, clickable prototype tailored to your system architecture.
-                </li>
-                <li class="flex items-start gap-3">
-                    <span class="text-blue-400 font-bold">03.</span> <strong>The Verdict:</strong> If you don't love it, you pay nothing. The code stays with us. If you see the value, we credit the slot directly toward our full product sprint.
-                </li>
-            </ul>
-            <div class="mt-8 flex flex-col sm:flex-row gap-4">
-                <a href="mailto:weworkai@://gmail.com Prototype Sprint Slot" class="inline-flex justify-center items-center px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold transition-all shadow-lg shadow-blue-600/20 text-center">
-                    Secure Your Sprint Slot
-                </a>
-                <a href="https://wa.me" target="_blank" class="inline-flex justify-center items-center px-6 py-3 rounded-xl bg-gray-800 hover:bg-gray-700 text-gray-200 font-medium transition-all text-center">
-                    Chat Directly on WhatsApp
-                </a>
-            </div>
+            <p class="mt-3 text-sm sm:text-base leading-relaxed text-slate2">
+              We take one project at a time, so your build gets our full attention.
+            </p>
+          </div>
+          <div class="rounded-2xl border border-cyan/30 bg-cyan/[0.04] p-6">
+            <p class="font-semibold text-cyan">Our guarantee</p>
+            <p class="mt-3 text-sm sm:text-base leading-relaxed text-slate2">
+              If you don't love the live preview, you owe nothing, and the code stays with us. If you see the value, we move straight into a standard project deployment sprint.
+            </p>
+          </div>
         </div>
+
+        <div class="mt-10 flex flex-col sm:flex-row gap-4">
+          <a href="mailto:weworkai@gmail.com?subject=Prototype%20Sprint%20Slot&amp;body=Hi%20weworkai%2C%20I%27d%20like%20to%20book%20a%2015-minute%20diagnostic%20call."
+             class="inline-flex items-center justify-center rounded-xl bg-cyan px-7 py-4 text-base font-semibold text-white transition hover:brightness-110 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-ink">
+            Secure Your Sprint Slot
+          </a>
+          <a href="https://wa.me/918824279806" target="_blank" rel="noopener noreferrer"
+             class="inline-flex items-center justify-center rounded-xl border border-white/20 bg-white/5 px-7 py-4 text-base font-semibold text-white backdrop-blur transition hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan">
+            Chat on WhatsApp
+          </a>
+        </div>
+      </div>
     </section>
 
-    <!-- SECTION 2: ARCHITECTURAL BOUNDARIES & PROOF -->
-    <section class="max-w-4xl mx-auto px-6 py-16 border-t border-gray-900">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-            <div>
-                <h4 class="text-xs font-semibold tracking-wider text-blue-500 uppercase">Operational Guardrails</h4>
-                <h2 class="mt-2 text-3xl font-bold text-white tracking-tight">How We Deliver Outcomes.</h2>
-                <p class="mt-4 text-gray-400 leading-relaxed text-sm">
-                    We maintain premium delivery standards by deliberately capping our workload. We are an agile development house, not a mass-volume software factory.
-                </p>
-                <div class="mt-6 space-y-4">
-                    <div>
-                        <h5 class="text-sm font-semibold text-gray-200">Strict Scope Control</h5>
-                        <p class="mt-1 text-xs text-gray-400 leading-relaxed">We ship exactly what we agree upon, precisely on schedule. New feature ideas are instantly mapped to the next deployment iteration sprint so launch dates never slip.</p>
-                    </div>
-                    <div>
-                        <h5 class="text-sm font-semibold text-gray-200">Capped Active Clients</h5>
-                        <p class="mt-1 text-xs text-gray-400 leading-relaxed">To ensure absolute architectural precision, our engineering cell only accepts a maximum of 2 to 3 active clients at any given time.</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="flex flex-col justify-center space-y-6">
-                <div class="p-6 rounded-xl bg-gray-900/20 border border-gray-800/40">
-                    <div class="text-xs text-blue-400 font-mono mb-2">[ Active Dev Repository 01 ]</div>
-                    <h4 class="text-base font-bold text-white">Automated Webhook-to-DB Pipeline</h4>
-                    <p class="mt-2 text-xs text-gray-400 leading-relaxed">Engineered to intake unstructured enterprise operational data, process it via LLM structuring layers, and execute safe transactional schema updates instantly.</p>
-                </div>
-                <div class="p-6 rounded-xl bg-gray-900/20 border border-gray-800/40">
-                    <div class="text-xs text-blue-400 font-mono mb-2">[ Active Dev Repository 02 ]</div>
-                    <h4 class="text-base font-bold text-white">Secure Contextual Document Search RAG</h4>
-                    <p class="mt-2 text-xs text-gray-400 leading-relaxed">High-performance vector storage framework engineered to let internal enterprise teams query isolated knowledge assets with explicit verification benchmarks.</p>
-                </div>
-            </div>
-        </div>
-        
-        <!-- FOOTER INFRASTRUCTURE -->
-        <div class="mt-20 pt-8 border-t border-gray-900 text-center text-xs text-gray-600">
-            © 2026 weworkai. Engineered for performance. Distributed worldwide from Jaipur, India.
-        </div>
-    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/10">
+    <div class="max-w-6xl mx-auto px-5 sm:px-8 py-10 text-center">
+      <p class="text-sm text-slate2 leading-relaxed">Email: weworkai@gmail.com | WhatsApp: +91 8824279806</p>
+      <p class="mt-4 text-xs text-slate2/70">&copy; 2026 weworkai.</p>
+    </div>
+  </footer>
 
 </body>
 </html>
